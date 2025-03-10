@@ -1,6 +1,14 @@
 import asyncio
 import concurrent.futures
 import os
+import sys
+print("#"*100)
+print(os.getcwd())
+sys.path.append(os.getcwd())
+sys.path.append(os.path.join(os.getcwd(), "application"))
+sys.path.append(os.path.join(os.getcwd(), "application", "llm_guard"))
+sys.path.append(os.path.join(os.getcwd(), "application", "llm_guard_api"))
+sys.path.append(os.path.join(os.getcwd(), "application", "llm_guard_api", "app"))
 import time
 from typing import Annotated, Callable, List
 from datetime import datetime
@@ -48,8 +56,8 @@ from .version import __version__
 LOGGER = structlog.getLogger(__name__)
 
 
-def create_app() -> FastAPI:
-    config_file = os.getenv("CONFIG_FILE", "./config/scanners.yml")
+def create_app(*args, **kwargs) -> FastAPI:
+    config_file = os.getenv("CONFIG_FILE", os.path.join(os.getcwd(), "application/llm_guard_api/config/scanners.yml"))
     if not config_file:
         raise ValueError("Config file is required")
 

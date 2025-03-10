@@ -8,5 +8,6 @@ structlog>=24
 slowapi==0.1.9
 psutil>=5.9
 oldest-supported-numpy
-optimum[onnxruntime]==1.23.1
+optimum[onnxruntime-gpu]==1.24.0
+gunicorn
 spacy-pkuseg>=1.0.0,<2.0.0
