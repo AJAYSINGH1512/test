@@ -12,9 +12,9 @@ from .base import Scanner
 LOGGER = get_logger()
 
 DEFAULT_MODEL = Model(
-    path="ProtectAI/distilroberta-base-rejection-v1",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--ProtectAI--distilroberta-base-rejection-v1/snapshots/65584967c3f22ff7723e5370c65e0e76791e6055",
     revision="65584967c3f22ff7723e5370c65e0e76791e6055",
-    onnx_path="ProtectAI/distilroberta-base-rejection-v1",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--ProtectAI--distilroberta-base-rejection-v1/snapshots/65584967c3f22ff7723e5370c65e0e76791e6055",
     onnx_revision="65584967c3f22ff7723e5370c65e0e76791e6055",
     onnx_subfolder="onnx",
     pipeline_kwargs={
