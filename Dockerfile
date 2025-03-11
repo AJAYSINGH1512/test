@@ -3,7 +3,6 @@ FROM python:3.11.3-slim
 # Create user & group correctly
 RUN groupadd -r myLowPrivilegeUser && useradd -r -g myLowPrivilegeUser myLowPrivilegeUser
 
-
 USER root
 
 # Install dependencies
@@ -24,7 +23,8 @@ RUN python -m spacy download en_core_web_sm && \
 # Ensure models are in the right directory
 RUN python -c "import spacy; print(spacy.util.get_package_path('en_core_web_sm'))"
 
-
+# Download NLTK vader_lexicon as root
+RUN python -c "import nltk; nltk.download('vader_lexicon', download_dir='/usr/local/nltk_data')"
 
 # Create necessary directories and set permissions
 RUN mkdir -p /home/myLowPrivilegeUser/.cache/huggingface/hub && \
@@ -42,6 +42,7 @@ ENV XDG_RUNTIME_DIR=/tmp/runtime-myLowPrivilegeUser
 ENV HF_HOME=/home/myLowPrivilegeUser/.cache/huggingface
 ENV HF_HUB_CACHE=/home/myLowPrivilegeUser/.cache/huggingface/hub
 ENV HF_HUB_OFFLINE=1
+ENV NLTK_DATA=/usr/local/nltk_data
 
 # Switch to the low-privilege user
 USER myLowPrivilegeUser
@@ -50,7 +51,6 @@ WORKDIR /application
 
 # Copy model files as root first
 COPY --chown=myLowPrivilegeUser:myLowPrivilegeUser models /home/myLowPrivilegeUser/.cache/huggingface/hub
-
 
 # Switch to the low-privilege user
 USER myLowPrivilegeUser
@@ -65,3 +65,4 @@ ENV PYTHONPATH="/application"
 
 # Start the application using Gunicorn and Uvicorn
 CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "-w", "6", "-b", "0.0.0.0:9005", "--timeout", "300", "application.llm_guard_api.app.app:create_app"]
+
