@@ -1,6 +1,14 @@
 import asyncio
 import concurrent.futures
 import os
+import sys
+print("#"*100)
+print(os.getcwd())
+sys.path.append(os.getcwd())
+sys.path.append(os.path.join(os.getcwd(), "application"))
+sys.path.append(os.path.join(os.getcwd(), "application", "llm_guard"))
+sys.path.append(os.path.join(os.getcwd(), "application", "llm_guard_api"))
+sys.path.append(os.path.join(os.getcwd(), "application", "llm_guard_api", "app"))
 import time
 from typing import Annotated, Callable, List
 from datetime import datetime
@@ -48,8 +56,8 @@ from .version import __version__
 LOGGER = structlog.getLogger(__name__)
 
 
-def create_app() -> FastAPI:
-    config_file = os.getenv("CONFIG_FILE", "./config/scanners.yml")
+def create_app(*args, **kwargs) -> FastAPI:
+    config_file = os.getenv("CONFIG_FILE", os.path.join(os.getcwd(), "application/llm_guard_api/config/scanners.yml"))
     if not config_file:
         raise ValueError("Config file is required")
 
@@ -247,7 +255,7 @@ def register_routes(
                     ),
                     timeout=config.app.scan_prompt_timeout,
                 )
-                pipe = pipeline("text-classification", model="jackhhao/jailbreak-classifier")
+                pipe = pipeline("text-classification", model="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--jackhhao--jailbreak-classifier/snapshots/771aa6f1391933e7cba0b21f0f17750c7a74a901")
                 jailbreak_results = pipe(request.prompt)
                 for jailbreak_result in jailbreak_results:
                     if jailbreak_result["label"] == "jailbreak":

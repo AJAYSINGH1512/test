@@ -57,6 +57,8 @@ def _ort_model_for_sequence_classification(
         provider = "CUDAExecutionProvider"
 
     onnxruntime = lazy_load_dep("optimum.onnxruntime", package_name)
+    if onnxruntime is None:
+        raise ImportError("Failed to import optimum.onnxruntime.")
 
     tf_model = onnxruntime.ORTModelForSequenceClassification.from_pretrained(
         model.onnx_path or model.path,
@@ -65,7 +67,7 @@ def _ort_model_for_sequence_classification(
         subfolder=model.onnx_subfolder,
         revision=model.onnx_revision,
         provider=provider,
-        **model.kwargs,
+        **model.kwargs
     )
     LOGGER.debug("Initialized classification ONNX model", model=model, device=device())
 

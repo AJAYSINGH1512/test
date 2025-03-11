@@ -14,24 +14,24 @@ from .base import Scanner
 LOGGER = get_logger()
 
 MODEL_EN_BGE_BASE = Model(
-    path="BAAI/bge-base-en-v1.5",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--BAAI--bge-base-en-v1.5",
     revision="a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
-    onnx_path="BAAI/bge-base-en-v1.5",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--BAAI--bge-base-en-v1.5",
     onnx_subfolder="onnx",
     onnx_filename="model.onnx",
     onnx_revision="a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
 )
 MODEL_EN_BGE_LARGE = Model(
-    path="BAAI/bge-large-en-v1.5",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--BAAI--bge-large-en-v1.5",
     revision="d4aa6901d3a41ba39fb536a557fa166f842b0e09",
-    onnx_path="BAAI/bge-large-en-v1.5",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--BAAI--bge-large-en-v1.5",
     onnx_subfolder="onnx",
     onnx_revision="d4aa6901d3a41ba39fb536a557fa166f842b0e09",
 )
 MODEL_EN_BGE_SMALL = Model(
-    path="BAAI/bge-small-en-v1.5",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
     revision="5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
-    onnx_path="BAAI/bge-small-en-v1.5",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5/snapshots/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
     onnx_revision="5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
     onnx_subfolder="onnx",
 )
