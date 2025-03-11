@@ -1,2 +1,70 @@
+# ========================= 🌟 Python Artifacts =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.pytest_cache/
+*.mypy_cache/
 .qodo
-*__pycache__
+
+# ========================= 🌟 Virtual Environment =========================
+venv/
+.env/
+.envrc
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========================= 🌟 FastAPI & Uvicorn =========================
+instance/
+*.log
+logs/
+*.sqlite3
+db.sqlite3
+
+# ========================= 🌟 Secrets & Configs =========================
+config.yaml
+config.json
+secrets.json
+*.pem
+*.key
+*.crt
+*.p12
+*.db
+*.vault
+*.enc
+secrets/
+.env
+.env.*
+
+# ========================= 🌟 Docker =========================
+docker-compose.override.yml
+.dockerignore
+.Dockerfile
+build/
+*.tar
+
+# ========================= 🌟 Kubernetes =========================
+/k8s/
+helm-chart/
+*.kubeconfig
+
+# ========================= 🌟 Jupyter Notebooks =========================
+.ipynb_checkpoints/
+*.ipynb
+
+# ========================= 🌟 IDE / Editor Files =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ========================= 🌟 Git & Misc =========================
+.git/
+*.swp
+*.bak
+*.orig
+
