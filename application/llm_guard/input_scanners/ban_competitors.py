@@ -13,9 +13,9 @@ from .base import Scanner
 LOGGER = get_logger()
 
 MODEL_V1 = Model(
-    path="guishe/nuner-v1_orgs",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--guishe--nuner-v1_orgs/snapshots/2e95454e741e5bdcbfabd6eaed5fb03a266cf043",
     revision="2e95454e741e5bdcbfabd6eaed5fb03a266cf043",
-    onnx_path="protectai/guishe-nuner-v1_orgs-onnx",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--guishe-nuner-v1_orgs-onnx/snapshots/20c9739f45f6b4d10ba63c62e6fa92f214a12a52",
     onnx_revision="20c9739f45f6b4d10ba63c62e6fa92f214a12a52",
     onnx_subfolder="",
     pipeline_kwargs={

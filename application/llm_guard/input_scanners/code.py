@@ -12,9 +12,9 @@ from .base import Scanner
 LOGGER = get_logger()
 
 DEFAULT_MODEL = Model(
-    path="philomath-1209/programming-language-identification",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--philomath-1209--programming-language-identification/snapshots/9090d38e7333a2c6ff00f154ab981a549842c20f",
     revision="9090d38e7333a2c6ff00f154ab981a549842c20f",
-    onnx_path="philomath-1209/programming-language-identification",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--philomath-1209--programming-language-identification/snapshots/9090d38e7333a2c6ff00f154ab981a549842c20f",
     onnx_revision="9090d38e7333a2c6ff00f154ab981a549842c20f",
     onnx_subfolder="onnx",
     pipeline_kwargs={

@@ -11,9 +11,9 @@ from .base import Scanner
 LOGGER = get_logger()
 
 DEFAULT_MODEL = Model(
-    path="papluca/xlm-roberta-base-language-detection",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--papluca--xlm-roberta-base-language-detection/snapshots/9865598389ca9d95637462f743f683b51d75b87b",
     revision="9865598389ca9d95637462f743f683b51d75b87b",
-    onnx_path="ProtectAI/xlm-roberta-base-language-detection-onnx",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--ProtectAI--xlm-roberta-base-language-detection-onnx/snapshots/dce2fa14a0dc61b6f889537e9ad4fccf083b22bd",
     onnx_revision="dce2fa14a0dc61b6f889537e9ad4fccf083b22bd",
     pipeline_kwargs={
         "top_k": None,

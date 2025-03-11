@@ -11,9 +11,9 @@ LOGGER = get_logger()
 # The most performant model. 0.43 B parameters, 870 MB.
 # It's English only. Context length max 512 tokens
 MODEL_DEBERTA_LARGE_V2 = Model(
-    path="MoritzLaurer/deberta-v3-large-zeroshot-v2.0",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--deberta-v3-large-zeroshot-v2.0",
     revision="cf44676c28ba7312e5c5f8f8d2c22b3e0c9cdae2",
-    onnx_path="MoritzLaurer/deberta-v3-large-zeroshot-v2.0",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--deberta-v3-large-zeroshot-v2.0",
     onnx_revision="cf44676c28ba7312e5c5f8f8d2c22b3e0c9cdae2",
     onnx_subfolder="onnx",
     pipeline_kwargs={
@@ -30,9 +30,9 @@ MODEL_DEBERTA_LARGE_V2 = Model(
 # It's English only. Context length max 512 tokens.
 # Faster than RoBERTa-large/BGE-3 models, but slower than RoBERTa-base
 MODEL_DEBERTA_BASE_V2 = Model(
-    path="MoritzLaurer/deberta-v3-base-zeroshot-v2.0",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--MoritzLaurer--deberta-v3-base-zeroshot-v2.0/snapshots/8e7e5af5983a0ddb1a5b45a38b129ab69e2258e8",
     revision="8e7e5af5983a0ddb1a5b45a38b129ab69e2258e8",
-    onnx_path="MoritzLaurer/deberta-v3-base-zeroshot-v2.0",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--MoritzLaurer--deberta-v3-base-zeroshot-v2.0/snapshots/8e7e5af5983a0ddb1a5b45a38b129ab69e2258e8",
     onnx_subfolder="onnx",
     onnx_revision="8e7e5af5983a0ddb1a5b45a38b129ab69e2258e8",
     pipeline_kwargs={

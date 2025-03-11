@@ -22,9 +22,9 @@ PROMPT_CHARACTERS_LIMIT = 256
 
 # This model is proprietary but open source.
 V1_MODEL = Model(
-    path="protectai/deberta-v3-base-prompt-injection",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--protectai--deberta-v3-base-prompt-injection",
     revision="f51c3b2a5216ae1af467b511bc7e3b78dc4a99c9",
-    onnx_path="ProtectAI/deberta-v3-base-prompt-injection",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--ProtectAI--deberta-v3-base-prompt-injection",
     onnx_revision="f51c3b2a5216ae1af467b511bc7e3b78dc4a99c9",
     onnx_subfolder="onnx",
     onnx_filename="model.onnx",
@@ -36,9 +36,9 @@ V1_MODEL = Model(
 )
 
 V2_MODEL = Model(
-    path="protectai/deberta-v3-base-prompt-injection-v2",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--protectai--deberta-v3-base-prompt-injection-v2/snapshots/89b085cd330414d3e7d9dd787870f315957e1e9f",
     revision="89b085cd330414d3e7d9dd787870f315957e1e9f",
-    onnx_path="ProtectAI/deberta-v3-base-prompt-injection-v2",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--ProtectAI--deberta-v3-base-prompt-injection-v2/snapshots/89b085cd330414d3e7d9dd787870f315957e1e9f",
     onnx_revision="89b085cd330414d3e7d9dd787870f315957e1e9f",
     onnx_subfolder="onnx",
     onnx_filename="model.onnx",
@@ -51,9 +51,9 @@ V2_MODEL = Model(
 
 # This is gated model, which requires our approval.
 V2_SMALL_MODEL = Model(
-    path="protectai/deberta-v3-small-prompt-injection-v2",
+    path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--protectai--deberta-v3-small-prompt-injection-v2",
     revision="3897fe66d47d2e1649e669c3470bf2ba3ddecc22",
-    onnx_path="protectai/deberta-v3-small-prompt-injection-v2",
+    onnx_path="/home/myLowPrivilegeUser/.cache/huggingface/hub/models--protectai--deberta-v3-small-prompt-injection-v2",
     onnx_revision="3897fe66d47d2e1649e669c3470bf2ba3ddecc22",
     onnx_subfolder="onnx",
     onnx_filename="model.onnx",
